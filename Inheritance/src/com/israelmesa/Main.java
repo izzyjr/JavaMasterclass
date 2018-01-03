@@ -8,5 +8,7 @@ public class Main {
 //        dog.eat();
         dog.walk();
         dog.run();
+
+
     }
 }
