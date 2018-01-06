@@ -25,4 +25,16 @@ public class Bathroom {
         toilet.pressFlushLever(flushes);
         System.out.println("Toilet has been flushed");
     }
+
+    public Sink getSink() {
+        return sink;
+    }
+
+    public Toilet getToilet() {
+        return toilet;
+    }
+
+    public Shower getShower() {
+        return shower;
+    }
 }

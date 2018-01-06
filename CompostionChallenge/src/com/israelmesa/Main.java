@@ -14,5 +14,6 @@ public class Main {
 	    theBathroom.turnSinkOn("Warm");
 
 	    theBathroom.flush(3);
+	    theBathroom.getShower().turnWaterOn("Cold");
     }
 }
