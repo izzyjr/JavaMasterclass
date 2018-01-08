@@ -45,12 +45,13 @@ package com.israelmesa;
  class ToyotaRav4 extends Car {
 
      public ToyotaRav4() {
-         super(4, "ToyotaRav4");
+         super(4, "Toyota Rav4");
      }
 
      @Override
      public void accelerate(int mph) {
          super.accelerate(mph);
+         System.out.println("We are currently in a " + this.getName() + " riding at " + mph + "mph");
      }
  }
 
@@ -62,17 +63,19 @@ package com.israelmesa;
      @Override
      public void accelerate(int mph) {
          super.accelerate(mph);
+         System.out.println("We are currently in a " + this.getName() + " riding at " + mph + "mph");
      }
  }
 
  class HondaPilot extends Car {
      public HondaPilot() {
-         super(4, "HondaPilot");
+         super(4, "Honda Pilot");
      }
 
      @Override
      public void accelerate(int mph) {
          super.accelerate(mph);
+         System.out.println("We are currently in a " + this.getName() + " riding at " + mph + "mph");
      }
  }
 
