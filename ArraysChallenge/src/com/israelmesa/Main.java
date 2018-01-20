@@ -43,8 +43,10 @@ public class Main {
                     sortedIntegers[j] = sortedIntegers[j + 1];
                     sortedIntegers[j + 1] = temp;
                     flag = true;
+                    System.out.println("number of tries " + j);
                 }
             }
+            System.out.println("...........................");
         }
         return sortedIntegers;
     }
