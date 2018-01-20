@@ -1,5 +1,6 @@
 package com.israelmesa;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main {
@@ -24,11 +25,12 @@ public class Main {
     }
 
     public static int[] sortIntegers(int[] values) {
-        int[] sortedIntegers = new int[values.length];
-
-        for (int i = 0; i < sortedIntegers.length; i++) {
-            sortedIntegers[i] = values[i];
-        }
+//        int[] sortedIntegers = new int[values.length];
+//
+//        for (int i = 0; i < sortedIntegers.length; i++) {
+//            sortedIntegers[i] = values[i];
+//        }
+        int[] sortedIntegers = Arrays.copyOf(values, values.length); //Replaces code right above ^
         int temp;
         boolean flag = true;
 
