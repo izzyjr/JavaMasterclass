@@ -24,20 +24,29 @@ public class Main {
     }
 
     public static int[] sortIntegers(int[] values) {
-        int max = 0;
         int[] sortedIntegers = new int[values.length];
 
         for (int i = 0; i < sortedIntegers.length; i++) {
-            for (int j = 0; j < values.length; j++) {
-                if (values[j] > max) {
-                    max = values[j];
+            sortedIntegers[i] = values[i];
+        }
+        int temp;
+        boolean flag = true;
+
+        while (flag)
+        {
+            flag = false;
+            for (int j = 0; j < sortedIntegers.length - 1; j++) {
+                if (sortedIntegers[j] < sortedIntegers[j + 1]) {
+                    temp = sortedIntegers[j];
+                    sortedIntegers[j] = sortedIntegers[j + 1];
+                    sortedIntegers[j + 1] = temp;
+                    flag = true;
                 }
             }
-            values[i] = max;
-            sortedIntegers[i] = values[i];
         }
         return sortedIntegers;
     }
+
     public static void printArray(int[] values) {
         for (int i = 0; i < values.length; i++) {
             System.out.println(values[i]);
