@@ -3,28 +3,33 @@ package com.israelmesa;
 import java.util.ArrayList;
 
 public class Album {
+    private String name;
+    private String artist;
+    private ArrayList<Song> songs;
 
-    private String albumName;
-    private ArrayList<Song> albumSongs;
-
-    public Album(String name, ArrayList<Song> albumSongs) {
-        this.albumName = albumName;
-        this.albumSongs = new ArrayList<Song>();
+    public Album(String name, String artist) {
+        this.name = name;
+        this.artist = artist;
+        this.songs = new ArrayList<Song>();
     }
 
-    public void addSongToAlbum(Song song) {
-        this.albumSongs.add(song);
-    }
-
-    public void displayAlbum() {
-        System.out.println("Album name: " + this.albumName);
-        for (int i = 0; i < this.albumSongs.size(); i++) {
-            System.out.println((i + 1) + ": " + this.albumSongs.get(i));
+    public boolean addSong(String songTitle, double songDuration) {
+        if (findSong(songTitle) == null) {
+            this.songs.add(new Song(songTitle, songDuration));
+            return true;
         }
+        return false;
     }
 
-    public void removeSong(int position) {
-        this.albumSongs.remove(position);
+    private Song findSong(String songTitle) {
+        for(Song checkedSong: this.songs) {
+            if(checkedSong.getSongTitle().equals(songTitle)) {
+                return checkedSong;
+            }
+        }
+        return null;
     }
+
+
 }
 
