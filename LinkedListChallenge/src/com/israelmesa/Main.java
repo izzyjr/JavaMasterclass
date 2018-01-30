@@ -22,23 +22,26 @@ public class Main {
         album.addSong("Chamber Mates", 05.08);
         albums.add(album);
 
-        album = new Album("We Three", "Paul Chambers");
-        album.addSong("Sugar Ray", 06.25);
-        album.addSong("Solitaire", 08.54);
-        album.addSong("After Hours", 11.24);
-        album.addSong("Sneakin' Around", 04.24);
-        album.addSong("Our Delight", 06.15);
+        album = new Album("Soultrane", "John Coltrane");
+        album.addSong("Good Bait", 12.08);
+        album.addSong("I Want to Talk About You", 10.53);
+        album.addSong("You Say You Care", 06.16);
+        album.addSong("Theme for Ernie", 04.57);
+        album.addSong("Russian Lullaby", 05.33);
         albums.add(album);
 
         LinkedList<Song> playList = new LinkedList<Song>();
-        albums.get(0).addToPlaylist("Yesterdays", playList);
-        albums.get(0).addToPlaylist("You'd Be So Nice to Come Home To", playList);
-        albums.get(0).addToPlaylist("Confessin", playList);
-        albums.get(0).addToPlaylist("Solitaire", playList);
+        albums.get(0).addToPlaylist(1, playList);
+        albums.get(0).addToPlaylist(2, playList);
+        albums.get(0).addToPlaylist(3, playList);
+        albums.get(0).addToPlaylist("The Theme", playList);
+        albums.get(0).addToPlaylist("Chamber Mates", playList);
         albums.get(1).addToPlaylist(1, playList);
+        albums.get(1).addToPlaylist(2, playList);
         albums.get(1).addToPlaylist(3, playList);
-        albums.get(1).addToPlaylist(4, playList);
-        albums.get(1).addToPlaylist(7, playList);
+        albums.get(1).addToPlaylist("Theme for Ernie", playList);
+        albums.get(1).addToPlaylist("Confessin", playList);
+
         play(playList);
 
     }
@@ -96,10 +99,10 @@ public class Main {
                 case 3:
                     break;
                 case 4:
-                    printList(playList);
+//                    printList(playList);
                     break;
                 case 5:
-                    printMenu();
+//                    printMenu();
                     break;
 
             }
