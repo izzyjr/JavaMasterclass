@@ -32,7 +32,7 @@ public class Album {
     }
 
     public boolean addToPlaylist(int trackNumber, LinkedList<Song> playList) {
-        int index = trackNumber;
+        int index = trackNumber - 1;
         if ((index > 0) && (index <= this.songs.size())) {
             playList.add(this.songs.get(index));
             return true;
