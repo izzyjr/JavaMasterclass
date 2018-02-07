@@ -8,4 +8,10 @@ public class Contacts {
         this.name = name;
         this.phoneNumber = phoneNumber;
     }
+
+    public String getInfo() {
+        return name + ": " + phoneNumber;
+    }
+
+
 }
