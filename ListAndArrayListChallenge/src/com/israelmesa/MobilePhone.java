@@ -14,7 +14,7 @@ public class MobilePhone {
     }
 
     public void printContactList() {
-        System.out.println("You have " + mobilePhone.size() + " contacts");
+        System.out.println("You have " + mobilePhone.size() + " contacts! \n");
         for (int i = 0; i < mobilePhone.size(); i++) {
             System.out.println((i + 1)  + ". " + mobilePhone.get(i).getInfo());
         }

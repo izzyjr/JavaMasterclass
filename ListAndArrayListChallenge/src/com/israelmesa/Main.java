@@ -19,6 +19,8 @@ public class Main {
         mobilePhone.addContact(contact5);
 
         mobilePhone.printContactList();
+        mobilePhone.removeContact(contact5);
+        mobilePhone.printContactList();
 
 
     }
