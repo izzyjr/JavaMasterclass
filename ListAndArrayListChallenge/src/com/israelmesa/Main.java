@@ -1,7 +1,10 @@
 package com.israelmesa;
 
+import java.util.Scanner;
+
 public class Main {
 
+    public static Scanner scanner = new Scanner(System.in);
     private static MobilePhone mobilePhone = new MobilePhone();
 
     public static void main(String[] args) {
@@ -22,6 +25,25 @@ public class Main {
         mobilePhone.removeContact(contact5);
         mobilePhone.printContactList();
 
+        editContact();
+        mobilePhone.printContactList();
+        mobilePhone.printContactList();
+
 
     }
+
+    public static void editContact() {
+        System.out.println("Select contact's list number: ");
+        int listNumber = scanner.nextInt();
+        scanner.nextLine();
+        System.out.println("Edit name: ");
+        String name = scanner.nextLine();
+        System.out.println("Edit phone number: ");
+        String phoneNumber = scanner.nextLine();
+        mobilePhone.chosen(listNumber).setName(name);
+        mobilePhone.chosen(listNumber).setPhoneNumber(phoneNumber);
+        mobilePhone.modifyContactInfo(listNumber, mobilePhone.chosen(listNumber));
+    }
+
+
 }

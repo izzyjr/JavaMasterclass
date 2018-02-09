@@ -19,5 +19,14 @@ public class MobilePhone {
             System.out.println((i + 1)  + ". " + mobilePhone.get(i).getInfo());
         }
     }
+
+    public void modifyContactInfo(int position, Contacts info) {
+        mobilePhone.set(position - 1, info);
+    }
+
+    public Contacts chosen(int position) {
+        Contacts chosen = mobilePhone.get(position - 1);
+        return chosen;
+    }
 }
 
