@@ -32,7 +32,7 @@ public class GroceryList {
         System.out.println("Grocery item " + (position + 1) + " has been modified to " + groceryList.get(position));
     }
 
-    public void removeGroceryIterm(String item) {
+    public void removeGroceryItem(String item) {
         int position = findItem(item);
         if (position >= 0) {
             removeGroceryItem(position);
