@@ -33,7 +33,7 @@ public class Main {
     }
 
     public static void editContact() {
-        System.out.println("Select contact's list number: ");
+        System.out.println("Select Contact's list number: ");
         int listNumber = scanner.nextInt();
         scanner.nextLine();
         System.out.println("Edit name: ");
