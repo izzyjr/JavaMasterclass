@@ -28,5 +28,19 @@ public class MobilePhone {
         Contacts chosen = mobilePhone.get(position - 1);
         return chosen;
     }
+
+    public void contactSearch(String name) {
+        boolean exists = false;
+        for (int i = 0; i < mobilePhone.size(); i++) {
+            if (mobilePhone.get(i).getName().equalsIgnoreCase(name)) {
+                exists = true;
+            }
+        }
+        if (exists) {
+            System.out.println("Contact " + name + " exists!");
+        } else {
+            System.out.println("Contact " + name + " does not exist!");
+        }
+    }
 }
 

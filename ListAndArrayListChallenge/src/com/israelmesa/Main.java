@@ -28,6 +28,7 @@ public class Main {
         editContact();
         mobilePhone.printContactList();
         mobilePhone.printContactList();
+        searchByName();
 
 
     }
@@ -44,6 +45,16 @@ public class Main {
         mobilePhone.chosen(listNumber).setPhoneNumber(phoneNumber);
         mobilePhone.modifyContactInfo(listNumber, mobilePhone.chosen(listNumber));
     }
+
+    public static void searchByName() {
+        System.out.println("Search by contact's name: ");
+        String contactName = scanner.nextLine();
+        mobilePhone.contactSearch(contactName);
+    }
+
+//    public static void add() {
+//
+//    }
 
 
 }
