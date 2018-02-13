@@ -51,10 +51,4 @@ public class Main {
         String contactName = scanner.nextLine();
         mobilePhone.contactSearch(contactName);
     }
-
-//    public static void add() {
-//
-//    }
-
-
 }
