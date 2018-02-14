@@ -12,7 +12,7 @@ public class MobilePhone {
     }
 
     public boolean addNewContact(Contact contact) {
-        if (findContact(contact.getName()) >= 0) {
+        if(findContact(contact.getName()) >= 0) {
             System.out.println("Contact is already on file!");
             return false;
         }
@@ -23,7 +23,7 @@ public class MobilePhone {
 
     public boolean updateContact(Contact oldContact, Contact newContact) {
         int foundPosition = findContact(oldContact);
-        if (foundPosition < 0) {
+        if(foundPosition < 0) {
             System.out.println(oldContact.getName() + " does not exist!");
             return false;
         }
@@ -34,7 +34,7 @@ public class MobilePhone {
 
     public boolean removeContact(Contact contact) {
         int foundPosition = findContact(contact);
-        if (foundPosition < 0) {
+        if(foundPosition < 0) {
             System.out.println(contact.getName() + " does not exist");
             return false;
         }
@@ -58,10 +58,19 @@ public class MobilePhone {
     }
 
     public String queryContact(Contact contact) {
-        if (findContact(contact) >= 0) {
+        if(findContact(contact) >= 0) {
             return contact.getName();
         }
         return null;
+    }
+
+    public Contact queryContact(String name) {
+        int position = findContact(name);
+        if(position >= 0) {
+            return this.myContacts.get(position);
+        } else {
+            return null;
+        }
     }
 
     public void printContacts() {
